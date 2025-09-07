@@ -56,6 +56,9 @@
     display: block;
   }
 }
+#es-rc #es-rc-content .es-kv {
+  background-color: #0073ce;
+}
 #es-rc #es-rc-content .es-kv__left {
   position: relative;
 }
@@ -71,8 +74,8 @@
 #es-rc #es-rc-content .es-kv__left__icon {
   position: absolute;
   width: 100px;
-  top: 32%;
-  right: 0;
+  right: 4%;
+  bottom: 6%;
 }
 #es-rc #es-rc-content .es-kv__right {
   background-size: 150% 150%;
@@ -137,7 +140,8 @@
     background-color: #0073ce;
   }
   #es-rc #es-rc-content .es-kv__left {
-    width: 46%;
+    width: 40%;
+    z-index: 1;
   }
   #es-rc #es-rc-content .es-kv__right {
     width: 72%;
@@ -149,6 +153,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-size: 100% 100%;
   }
   #es-rc #es-rc-content .es-kv__right__textCtn {
     margin-left: 16%;
@@ -186,7 +191,7 @@
 #es-rc #es-rc-content .es-features {
   background-color: #46d7ac;
   color: #ffffff;
-  padding: 24px;
+  padding: 24px 24px 0 24px;
 }
 #es-rc #es-rc-content .es-features ::-moz-selection {
   background-color: #0073ce;
@@ -222,29 +227,13 @@
   height: 16px;
   margin: 0;
 }
-#es-rc #es-rc-content .es-features__badgeCtn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  margin-top: 24px;
-  max-width: 300px;
-}
-#es-rc #es-rc-content .es-features__badge__img {
-  width: 25%;
-  max-width: 100px;
-}
-#es-rc #es-rc-content .es-features__badge__text {
-  color: #003058;
-  text-transform: uppercase;
-  font-size: 16px;
-}
-#es-rc #es-rc-content .es-features__badge__text--bold {
-  font-weight: 700;
-}
 #es-rc #es-rc-content .es-features__text {
-  font-size: 16px;
-  margin-top: 24px;
+  color: #003058;
+  font-size: 32px;
+  margin-block: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-wrap: balance;
 }
 #es-rc #es-rc-content .es-features__hand__container {
   margin-right: -24px;
@@ -273,20 +262,20 @@
 #es-rc #es-rc-content .es-features__bg {
   display: none;
 }
-@container es-rc-content (min-width: 360px) {
-  #es-rc #es-rc-content .es-features__badge__text {
-    font-size: 19.2px;
-  }
-}
 @container es-rc-content (min-width: 440px) {
+  #es-rc #es-rc-content .es-features__text {
+    font-size: 38.4px;
+    max-width: 68%;
+  }
   #es-rc #es-rc-content .es-features__hand__container {
     position: relative;
-    margin-block: 24px;
+    margin-top: 24px;
     z-index: 2;
+    padding-top: 32px;
   }
   #es-rc #es-rc-content .es-features__shape {
     position: absolute;
-    top: 0;
+    top: -32px;
     right: 0;
   }
 }
@@ -294,10 +283,12 @@
   #es-rc #es-rc-content .es-features {
     position: relative;
     z-index: 1;
+    padding: 24px;
   }
   #es-rc #es-rc-content .es-features__hand__container {
     position: static;
     margin: 0;
+    padding: 0;
   }
   #es-rc #es-rc-content .es-features__hand__image {
     display: none;
@@ -322,6 +313,10 @@
   #es-rc #es-rc-content .es-features__wrapper--bottom {
     width: 75%;
   }
+  #es-rc #es-rc-content .es-features__shape {
+    margin: 0;
+    top: 0;
+  }
 }
 @container es-rc-content (min-width: 768px) {
   #es-rc #es-rc-content .es-features {
@@ -342,17 +337,6 @@
   }
   #es-rc #es-rc-content .es-features__points {
     font-size: 20px;
-  }
-  #es-rc #es-rc-content .es-features__badgeCtn {
-    max-width: 400px;
-    gap: 20px;
-  }
-  #es-rc #es-rc-content .es-features__badge__text {
-    font-size: 24px;
-  }
-  #es-rc #es-rc-content .es-features__text {
-    font-size: 18.4px;
-    margin-top: 32px;
   }
   #es-rc #es-rc-content .es-features__shape {
     padding: 0px 0px 0px 24px;

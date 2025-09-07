@@ -87,6 +87,7 @@ $transition: all 0.3s ease-in-out;
   }
 
   .es-kv {
+    background-color: $color-accent;
     &__left {
       position: relative;
       &__logo {
@@ -101,8 +102,8 @@ $transition: all 0.3s ease-in-out;
       &__icon {
         position: absolute;
         width: 100px;
-        top: 32%;
-        right: 0;
+        right: 4%;
+        bottom: 6%;
       }
     }
     &__right {
@@ -170,7 +171,8 @@ $transition: all 0.3s ease-in-out;
       position: relative;
       background-color: $color-accent;
       &__left {
-        width: 46%;
+        width: 40%;
+        z-index: 1;
       }
       &__right {
         width: 72%;
@@ -182,6 +184,7 @@ $transition: all 0.3s ease-in-out;
         display: flex;
         align-items: center;
         justify-content: center;
+        background-size: 100% 100%;
         &__textCtn {
           margin-left: 16%;
         }
@@ -225,7 +228,7 @@ $transition: all 0.3s ease-in-out;
   .es-features {
     background-color: $color-accent-2;
     color: $color-bg;
-    padding: $px-L;
+    padding: $px-L $px-L 0 $px-L;
     ::selection {
       background-color: $color-accent;
       color: $color-bg;
@@ -256,31 +259,13 @@ $transition: all 0.3s ease-in-out;
         margin: 0;
       }
     }
-    &__badge {
-      &Ctn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: $px-M;
-        margin-top: $px-L;
-        max-width: 300px;
-      }
-      &__img {
-        width: 25%;
-        max-width: 100px;
-      }
-      &__text {
-        color: $color-main;
-        text-transform: uppercase;
-        font-size: $fs-base;
-        &--bold {
-          font-weight: $fw-bold;
-        }
-      }
-    }
     &__text {
-      font-size: $fs-base;
-      margin-top: $px-L;
+      color: $color-main;
+      font-size: $fs-header;
+      margin-block: $px-L;
+      font-weight: $fw-bold;
+      text-transform: uppercase;
+      text-wrap: balance;
     }
     &__hand {
       &__container {
@@ -311,34 +296,35 @@ $transition: all 0.3s ease-in-out;
     &__bg {
       display: none;
     }
-    @container es-rc-content (min-width: 360px) {
-      &__badge {
-        &__text {
-          font-size: calc(1.2 * $fs-base);
-        }
-      }
-    }
+
     @container es-rc-content (min-width: 440px) {
+      &__text {
+        font-size: calc(1.2 * $fs-header);
+        max-width: 68%;
+      }
       &__hand {
         &__container {
           position: relative;
-          margin-block: $px-L;
+          margin-top: $px-L;
           z-index: 2;
+          padding-top: $px-XL;
         }
       }
       &__shape {
         position: absolute;
-        top: 0;
+        top: -$px-XL;
         right: 0;
       }
     }
     @container es-rc-content (min-width: 576px) {
       position: relative;
       z-index: 1;
+      padding: $px-L;
       &__hand {
         &__container {
           position: static;
           margin: 0;
+          padding: 0;
         }
         &__image {
           display: none;
@@ -365,6 +351,10 @@ $transition: all 0.3s ease-in-out;
           width: 75%;
         }
       }
+      &__shape {
+        margin: 0;
+        top: 0;
+      }
     }
     @container es-rc-content (min-width: 768px) {
       padding: $px-XL;
@@ -382,19 +372,6 @@ $transition: all 0.3s ease-in-out;
       }
       &__points {
         font-size: $fs-base-md;
-      }
-      &__badge {
-        &Ctn {
-          max-width: 400px;
-          gap: 20px;
-        }
-        &__text {
-          font-size: 24px;
-        }
-      }
-      &__text {
-        font-size: 18.4px;
-        margin-top: 32px;
       }
       &__shape {
         padding: 0px 0px 0px 24px;
