@@ -525,27 +525,51 @@
   #es-rc #es-rc-content .es-formula-use {
     display: flex;
     align-items: center;
-    background-color: #46d7ac;
     position: relative;
   }
   #es-rc #es-rc-content .es-formula-use__image {
     width: 54%;
     min-height: 284px;
     margin-left: 0;
+    z-index: 1;
   }
   #es-rc #es-rc-content .es-formula-use__content {
     margin-left: -30px;
     background-color: transparent;
-    width: 49%;
+    width: 78%;
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 40% 100%);
+    background-color: #46d7ac;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  #es-rc #es-rc-content .es-formula-use__text-wrapper {
+    width: 65%;
+  }
+  #es-rc #es-rc-content .es-formula-use__name {
+    font-size: 20px;
   }
 }
 @container es-rc-content (min-width: 768px) {
+  #es-rc #es-rc-content .es-formula-use__content {
+    padding: 30px;
+  }
   #es-rc #es-rc-content .es-formula-use__image {
     width: 50%;
+  }
+  #es-rc #es-rc-content .es-formula-use__text-wrapper {
+    width: 67%;
+  }
+  #es-rc #es-rc-content .es-formula-use__name {
+    font-size: 26px;
+  }
+  #es-rc #es-rc-content .es-formula-use__text {
+    font-size: 18px;
   }
 }
 #es-rc #es-rc-content .es-video__iframe {

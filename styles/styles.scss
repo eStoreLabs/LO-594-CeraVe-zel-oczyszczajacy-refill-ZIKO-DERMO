@@ -566,26 +566,50 @@ $transition: all 0.3s ease-in-out;
     @container es-rc-content (min-width: 576px) {
       display: flex;
       align-items: center;
-      background-color: $color-accent-2;
       position: relative;
       &__image {
         width: 54%;
         min-height: 284px;
         margin-left: 0;
+        z-index: 1;
       }
       &__content {
         margin-left: -30px;
         background-color: transparent;
-        width: 49%;
+        width: 78%;
         position: absolute;
         right: 0;
         top: 50%;
         transform: translateY(-50%);
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 40% 100%);
+        background-color: $color-accent-2;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+      }
+      &__text-wrapper {
+        width: 65%;
+      }
+      &__name {
+        font-size: 20px;
       }
     }
     @container es-rc-content (min-width: 768px) {
+      &__content {
+        padding: 30px;
+      }
       &__image {
         width: 50%;
+      }
+      &__text-wrapper {
+        width: 67%;
+      }
+      &__name {
+        font-size: 26px;
+      }
+      &__text {
+        font-size: 18px;
       }
     }
   }
