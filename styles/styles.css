@@ -5,7 +5,7 @@
   line-height: 1.25;
   color: #003058;
   background-color: #ffffff;
-  max-width: 990px;
+  max-width: 720px;
   margin: auto;
   container-type: inline-size;
   container-name: es-rc-content;
@@ -656,7 +656,7 @@
     clip-path: polygon(57% 0%, 100% 0%, 100% 100%, 5% 100%);
   }
 }
-@container es-rc-content (min-width: 768px) {
+@container es-rc-content (min-width: 719px) {
   #es-rc #es-rc-content .es-packaging {
     flex-direction: row;
   }
@@ -746,7 +746,7 @@
 #es-rc #es-rc-content .es-cross__item__image-container:hover ~ .es-cross__item__button, #es-rc #es-rc-content .es-cross__item__image:hover ~ .es-cross__item__button {
   background-color: #46d7ac;
 }
-@container es-rc-content (min-width: 768px) {
+@container es-rc-content (min-width: 719px) {
   #es-rc #es-rc-content .es-cross__content {
     flex-direction: row;
     align-items: flex-start;
@@ -764,15 +764,21 @@
   #es-rc #es-rc-content .es-cross__item__image-container {
     width: 100%;
     height: 100%;
-    display: grid;
+    display: flex;
     align-items: flex-end;
     aspect-ratio: 1/1;
   }
   #es-rc #es-rc-content .es-cross__item__image--3 {
     max-height: 77%;
   }
+  #es-rc #es-rc-content .es-cross__item__text-step {
+    font-size: 20px;
+  }
+  #es-rc #es-rc-content .es-cross__item__text-name {
+    height: 3em;
+  }
   #es-rc #es-rc-content .es-cross__item__text-description {
-    height: 110px;
+    height: 9em;
   }
 }
 @container es-rc-content (min-width: 880px) {
