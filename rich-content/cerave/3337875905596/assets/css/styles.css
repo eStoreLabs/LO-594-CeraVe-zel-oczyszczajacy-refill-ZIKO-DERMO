@@ -502,6 +502,9 @@
     z-index: 2;
     width: 55%;
   }
+  #es-rc #es-rc-content .es-benefits__list__text {
+    font-size: 17px;
+  }
 }
 @container es-rc-content (min-width: 768px) {
   #es-rc #es-rc-content .es-benefits {
