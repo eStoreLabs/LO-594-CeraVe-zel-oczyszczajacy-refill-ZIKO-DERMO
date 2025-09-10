@@ -585,12 +585,7 @@
     font-size: 18px;
   }
 }
-#es-rc #es-rc-content .es-video__iframe {
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 16/9;
-  border: 0;
-}
+
 #es-rc #es-rc-content .es-packaging {
   display: flex;
   flex-direction: column;
@@ -792,4 +787,4 @@
 #es-rc #es-rc-content .es-disclaimer {
   font-size: 11px;
   margin-block: 40px;
-}/*# sourceMappingURL=styles.css.map */
+}
