@@ -56,11 +56,13 @@
     display: block;
   }
 }
-#es-rc #es-rc-content .es-kv {
-  background-color: #0073ce;
-}
 #es-rc #es-rc-content .es-kv__left {
   position: relative;
+}
+#es-rc #es-rc-content .es-kv__left__image {
+  clip-path: polygon(0 0, 59% 0%, 100% 100%, 0% 100%);
+  background-color: #0073ce;
+  padding-right: 17%;
 }
 #es-rc #es-rc-content .es-kv__left__logo {
   background-color: #003058;
@@ -115,6 +117,12 @@
     font-size: 32px;
   }
 }
+@container es-rc-content (min-width: 440px) {
+  #es-rc #es-rc-content .es-kv__left__icon {
+    top: 32%;
+    right: 0;
+  }
+}
 @container es-rc-content (min-width: 576px) {
   #es-rc #es-rc-content .es-kv__right {
     background-color: #0073ce;
@@ -142,6 +150,11 @@
   #es-rc #es-rc-content .es-kv__left {
     width: 40%;
     z-index: 1;
+  }
+  #es-rc #es-rc-content .es-kv__left__image {
+    background-color: transparent;
+    clip-path: unset;
+    padding-right: 0;
   }
   #es-rc #es-rc-content .es-kv__right {
     width: 72%;

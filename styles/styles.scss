@@ -87,9 +87,13 @@ $transition: all 0.3s ease-in-out;
   }
 
   .es-kv {
-    background-color: $color-accent;
     &__left {
       position: relative;
+      &__image {
+        clip-path: polygon(0 0, 59% 0%, 100% 100%, 0% 100%);
+        background-color: $color-accent;
+        padding-right: 17%;
+      }
       &__logo {
         background-color: $color-main;
         padding: 20px 20px 20px 40px;
@@ -148,6 +152,14 @@ $transition: all 0.3s ease-in-out;
         }
       }
     }
+    @container es-rc-content (min-width: 440px) {
+      &__left {
+        &__icon {
+          top: 32%;
+          right: 0;
+        }
+      }
+    }
     @container es-rc-content (min-width: 576px) {
       &__right {
         background-color: $color-accent;
@@ -173,6 +185,11 @@ $transition: all 0.3s ease-in-out;
       &__left {
         width: 40%;
         z-index: 1;
+        &__image {
+          background-color: transparent;
+          clip-path: unset;
+          padding-right: 0;
+        }
       }
       &__right {
         width: 72%;
